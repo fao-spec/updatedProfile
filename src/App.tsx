@@ -7,6 +7,7 @@ import { Contact } from './components/Contact';
 import About from './components/About';
 import BlogPage from './pages/BlogPage';
 import BlogDetailsPage from './pages/BlogDetailsPage'; // wrapper for BlogDetail
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           {/* Home Page */}
           <Route
-            path="*"
+            path="/"
             element={
               <>
                 <Hero />
@@ -39,10 +40,8 @@ function App() {
           {/* Fallback */}
           <Route
             path="*"
-            element={
-              <div className="min-h-screen flex items-center justify-center text-gray-300">
-                <h1 className="text-3xl font-bold">Page Not Found</h1>
-              </div>
+            element={ 
+              <NotFound />
             }
           />
         </Routes>
