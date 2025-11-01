@@ -11,6 +11,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="relative min-h-screen overflow-x-hidden">
       <AnimatedBackground />
       <Navbar />
+      
 
       <main className="relative z-10">{children}</main>
 

@@ -7,7 +7,7 @@ export const Contact = () => {
   const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.3 });
 
   const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:favourarowosegbe0@example.com', color: 'hover:text-red-400' },
+    { icon: Mail, label: 'Email', href: 'mailto:favourarowosegbeo@gmail.com', color: 'hover:text-red-400' },
     { icon: Github, label: 'GitHub', href: 'https://github.com/fao-spec', color: 'hover:text-gray-300' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/codewithfave', color: 'hover:text-blue-400' },
     { icon: Twitter, label: 'Twitter', href: 'https://x.com/codeWithFave', color: 'hover:text-sky-400' },

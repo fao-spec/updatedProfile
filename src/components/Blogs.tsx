@@ -103,7 +103,7 @@ const BlogCard = ({
         )}
 
         <Link
-          to={`/blog/${blog.id}`}
+          to={`/blogs/${blog.id}`}
           state={{ blog }}
           className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors font-semibold group/link"
         >

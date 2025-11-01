@@ -56,7 +56,7 @@ export const Navbar = () => {
             </Link>
 
             <Link
-              to="/blog"
+              to="/blogs"
               className="text-gray-300 hover:text-violet-400 transition-all duration-300 font-medium hover:scale-110"
             >
               Blog
@@ -106,11 +106,11 @@ export const Navbar = () => {
 
           {/* BLOG link in mobile dropdown */}
           <Link
-            to="/blog"
+            to="/blogs"
             className="block w-full text-left text-gray-300 hover:text-violet-400 transition-colors py-2"
             onClick={() => setIsOpen(false)}
           >
-            Blog
+            Blogs
           </Link>
 
           <button

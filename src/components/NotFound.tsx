@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
+import { Layout } from "../components/Layout";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-950 text-white px-6">
-      <h1 className="text-8xl font-extrabold mb-4">404</h1>
-      <p className="text-2xl mb-8">Oops! Page not found.</p>
-      <p className="mb-8 text-gray-400">The page you are looking for does not exist.</p>
-      <Link
-        to="/"
-        className="px-6 py-3 bg-violet-600 hover:bg-violet-700 rounded-lg transition-colors text-white font-medium"
-      >
-        Go Back Home
-      </Link>
+    <Layout>
+       <div className="relative z-10 w-full pt-32 pb-32 flex justify-center items-center">
+      <div className="text-center text-white px-4">
+        <h1 className="text-6xl font-bold mb-4">404</h1>
+        <p className="text-lg opacity-80 mb-6">Oops... this page drifted into deep space</p>
+
+        <a
+          href="/"
+          className="px-6 py-3 rounded-xl border border-gray-400/50 hover:bg-gray-800/40 transition"
+        >
+          Return Home 
+        </a>
+      </div>
     </div>
+    </Layout>
   );
 }

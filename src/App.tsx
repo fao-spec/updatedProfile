@@ -1,60 +1,71 @@
 // App.tsx
-import { Routes, Route } from 'react-router-dom';
-import { AnimatedBackground } from './components/AnimatedBackground';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Contact } from './components/Contact';
-import About from './components/About';
-import BlogPage from './pages/BlogPage';
-import BlogDetailsPage from './pages/BlogDetailsPage'; // wrapper for BlogDetail
-import NotFound from './components/NotFound';
+import { Routes, Route } from "react-router-dom";
+import {Layout} from "./components/Layout";
+
+import { Hero } from "./components/Hero";
+import { Contact } from "./components/Contact";
+import About from "./components/About";
+
+import ProjectPage from "./pages/ProjectsPage";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailsPage from "./pages/BlogDetailsPage";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
-      <AnimatedBackground />
-      <Navbar />
+    <Routes>
+      {/* Home Page */}
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Hero />
+            <About />
+            <Contact />
+          </Layout>
+        }
+      />
 
-      <main className="relative z-10">
-        <Routes>
-          {/* Home Page */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                {/* <Projects /> */}
-                {/* <Blogs /> */}
-                <About />
-                <Contact />
-              </>
-            }
-          />
+      {/* Project List */}
+      <Route
+        path="/projects"
+        element={
+          <Layout>
+            <ProjectPage />
+          </Layout>
+        }
+      />
 
-          {/* Blog List Page */}
-          <Route path="/blog" element={<BlogPage />} />
+      {/* Blog List */}
+      <Route
+        path="/blogs"
+        element={
+          <Layout>
+            <BlogPage />
+          </Layout>
+        }
+      />
 
-          {/* Blog Detail Page */}
-          <Route path="/blog/:id" element={<BlogDetailsPage />} />
+      {/* Blog Details */}
+      <Route
+        path="/blogs/:id"
+        element={
+          <Layout>
+            <BlogDetailsPage />
+          </Layout>
+        }
+      />
 
-          {/* Fallback */}
-          <Route
-            path="*"
-            element={ 
-              <NotFound />
-            }
-          />
-        </Routes>
-      </main>
-
-      <footer className="relative z-10 bg-gray-900/50 backdrop-blur-sm border-t border-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} Portfolio. Built with React & Tailwind CSS.
-          </p>
-        </div>
-      </footer>
-    </div>
+      {/* 404 */}
+      <Route
+        path="*"
+        element={
+          <Layout>
+            <NotFound />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 

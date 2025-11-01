@@ -112,12 +112,19 @@ For me, this process isn’t just workflow; it’s a creative ritual. It balance
   if (!blog) {
     return (
       <Layout>
-      <div className="min-h-screen flex flex-col items-center justify-center text-gray-300 bg-transparent relative z-10">
-        <h1 className="text-3xl font-bold mb-4">Blog not found</h1>
-        <Link to="/" className="text-violet-400 hover:underline">
-          Back Home
-        </Link>
+      <div className="relative z-10 w-full pt-32 pb-32 flex justify-center items-center">
+      <div className="text-center text-white px-4">
+        <h1 className="text-6xl font-bold mb-4">404</h1>
+        <p className="text-lg opacity-80 mb-6">Oops... this page drifted into deep space</p>
+
+        <a
+          href="/"
+          className="px-6 py-3 rounded-xl border border-gray-400/50 hover:bg-gray-800/40 transition"
+        >
+          Return Home 
+        </a>
       </div>
+    </div>
       </Layout>
     );
   }
@@ -126,7 +133,7 @@ For me, this process isn’t just workflow; it’s a creative ritual. It balance
     <Layout>
     <div className="relative min-h-screen px-6 py-20 max-w-4xl mx-auto text-gray-300 bg-transparent z-10">
       <Link
-        to="/blog"
+        to="/blogs"
          className="fixed top-24 left-6 bg-violet-600 hover:bg-violet-700 text-white hover:text-violet-300 px-4 py-2 rounded-lg shadow-lg z-50 transition-colors backdrop-blur-sm"
       >
         ← Back to Blogs

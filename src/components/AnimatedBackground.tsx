@@ -151,7 +151,7 @@ export const AnimatedBackground = () => {
         ref={fogRef}
         className="fixed inset-0 -z-20 pointer-events-none"
         style={{
-          backgroundImage: "url('https://i.ibb.co/Z6sR6fG/nebula.png')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1200&q=80')",
           backgroundSize: "cover",
           opacity: 0.13,
           filter: "blur(6px)",
