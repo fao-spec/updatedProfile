@@ -232,7 +232,7 @@ export const Projects = () => {
           'A portfolio demonstrating solutions that go deeper than expectations.',
         image_url: '/projects/Profile.png',
         video_url: '/projects/Progress.mp4',
-        url: 'https://personal-website-dgo63nvh3-devfaves-projects.vercel.app/',
+        url: 'https://personal-website-steel-chi.vercel.app/',
         github_url: 'https://github.com/fao-spec/portfolio',
         tags: ['Python', 'Django', 'UI/UX'],
         order_index: 5,
@@ -242,7 +242,7 @@ export const Projects = () => {
     setTimeout(() => {
       setProjects(demoProjects);
       setLoading(false);
-    }, 1000); // Simulate API delay
+    }, 500); // Simulate API delay
   }, []);
 
   return (

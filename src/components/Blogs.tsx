@@ -166,7 +166,7 @@ export const Blogs = () => {
     setTimeout(() => {
       setBlogs(allBlogs);
       setLoading(false);
-    }, 1500);
+    }, 300);
   }, []);
 
   // Typing animation (heading)
