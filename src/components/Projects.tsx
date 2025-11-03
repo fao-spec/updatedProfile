@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { OrbitSpinner } from '../components/LoadingScreen'; // 👈 import spinner
+import { OrbitSpinner } from '../components/LoadingScreen';
 
 type Project = {
   id: string;
@@ -18,8 +18,7 @@ type Project = {
 
 const ProjectCard = ({
   project,
-  index,
-  scrollDir,
+  scrollDir
 }: {
   project: Project;
   index: number;
@@ -32,7 +31,7 @@ const ProjectCard = ({
     <div
       ref={cardRef}
       className={`group relative bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700/50 
-        hover:border-violet-500/50 transition-all duration-700 delay-[1000ms] transform 
+        hover:border-violet-500/50 transition-all duration-700 transform 
         ${
           isVisible
             ? 'opacity-100 translate-y-0'
@@ -40,7 +39,6 @@ const ProjectCard = ({
             ? 'opacity-0 translate-y-16'
             : 'opacity-0 -translate-y-16'
         }`}
-      style={{ transitionDelay: `${500 + index * 150}ms` }}
     >
       <div className="relative h-64 overflow-hidden bg-gray-900">
         {project.video_url ? (
@@ -149,7 +147,7 @@ export const Projects = () => {
           clearInterval(interval);
         }
       }, 250);
-    }, 1000);
+    }, 0);
     return () => clearTimeout(delay);
   }, []);
 
@@ -186,11 +184,11 @@ export const Projects = () => {
         title: 'Portfolio Website',
         description: 'A modern personal website built with React and Tailwind CSS.',
         image_url: '/projects/codeWithFave.png',
-        url: '/',
+        url: 'https://codewithfave.vercel.app/',
         github_url: 'https://github.com/fao-spec/updatedProfile',
         tags: ['React', 'Tailwind', 'Framer Motion'],
         featured: true,
-        order_index: 1,
+        order_index: 1
       },
       {
         id: '2',
@@ -201,10 +199,21 @@ export const Projects = () => {
         url: 'https://property-pulse-eosin-mu.vercel.app/',
         github_url: 'https://github.com/fao-spec/property',
         tags: ['Next.js', 'Node.js', 'MongoDB'],
-        order_index: 2,
+        order_index: 2
       },
       {
         id: '3',
+        title: 'TokenMaster',
+        description: 'Decentralized, secure and fraud-proof ticketing powered by blockchain.',
+        image_url: '/projects/ticketmaster.png',
+        video_url: '/projects/web3.mp4',
+        url: 'https://ticketmaster-azure.vercel.app/',
+        github_url: 'https://github.com/fao-spec/Ticketmaster',
+        tags: ['React.js', 'Hardhat', 'Ethers.js'],
+        order_index: 3
+      },
+      {
+        id: '4',
         title: 'AdSnap Studio: AI-Powered Product Ad Generator',
         description:
           'A powerful Streamlit app for generating professional product ads using Bria AI’s advanced APIs.',
@@ -212,10 +221,10 @@ export const Projects = () => {
         url: 'https://adsnapstudio.streamlit.app/',
         github_url: 'https://github.com/fao-spec/Adsnap_Studio',
         tags: ['Python', 'Creative Automation', 'AI Tools'],
-        order_index: 3,
+        order_index: 4
       },
       {
-        id: '4',
+        id: '5',
         title: 'Your Frontline Crypto Helpdesk',
         description:
           'A web-first support solution giving users clarity, confidence, and quick fixes when they need them most.',
@@ -223,10 +232,10 @@ export const Projects = () => {
         url: 'https://fao-spec.github.io/CryptoSupport/',
         github_url: 'https://github.com/fao-spec/CryptoSupport',
         tags: ['Javascript', 'Tailwind', 'UI/UX'],
-        order_index: 4,
+        order_index: 5
       },
       {
-        id: '5',
+        id: '6',
         title: 'First Portfolio Website',
         description:
           'A portfolio demonstrating solutions that go deeper than expectations.',
@@ -235,14 +244,14 @@ export const Projects = () => {
         url: 'https://personal-website-steel-chi.vercel.app/',
         github_url: 'https://github.com/fao-spec/portfolio',
         tags: ['Python', 'Django', 'UI/UX'],
-        order_index: 5,
-      },
+        order_index: 6
+      }
     ];
 
     setTimeout(() => {
       setProjects(demoProjects);
       setLoading(false);
-    }, 500); // Simulate API delay
+    }, 0);
   }, []);
 
   return (
@@ -268,16 +277,11 @@ export const Projects = () => {
       </div>
 
       {loading ? (
-        <OrbitSpinner /> // 👈 Beautiful centered loading animation
+        <OrbitSpinner />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-              scrollDir={scrollDir}
-            />
+            <ProjectCard key={project.id} project={project} index={index} scrollDir={scrollDir} />
           ))}
         </div>
       )}

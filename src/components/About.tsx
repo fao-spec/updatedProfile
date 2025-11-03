@@ -51,7 +51,7 @@ const About = () => {
             variants={textVariant(0.2)}
             className="text-lg text-gray-300 leading-relaxed italic"
             >
-            Hey there! I'm <span className="font-semibold text-white">Favour</span> — a passionate
+            Hey there! I'm <span className="font-semibold text-white">Favour</span> , a passionate
             <span className="font-semibold text-white"> Frontend Developer</span> on an exciting journey toward becoming a 
             <span className="font-semibold text-white"> Full-Stack Developer</span> and ultimately a 
             <span className="font-semibold text-white"> Software Engineer</span>.
@@ -64,11 +64,10 @@ const About = () => {
             variants={textVariant(0.4)}
             className="text-gray-400 leading-relaxed italic"
             >
-            My coding journey started with curiosity and a love for beautiful interfaces —
+            My coding journey started with curiosity and a love for beautiful interfaces,
             HTML, CSS & JavaScript were my first tools. Over time, that curiosity grew into
-            a mission: to build real, scalable, and impactful digital experiences.
-            Now, I'm expanding into backend technologies like 
-            <span className="font-semibold text-white"> Python & Django</span> — leveling up toward full-stack engineering.
+            a mission: to build real, scalable and impactful digital experiences.
+            Now leveling up toward full-stack engineering.
             I enjoy crafting smooth UI/UX, solving technical challenges, and continuously learning to sharpen my craft.
             </motion.p>
 
@@ -79,7 +78,7 @@ const About = () => {
             variants={textVariant(0.6)}
             className="text-gray-400 leading-relaxed italic"
             >
-            For me, tech is more than code — it's creativity, problem-solving, and growth.
+            For me, tech is more than code, it's creativity, problem-solving and growth.
             Every project moves me one step closer to becoming a world-class software engineer.
             </motion.p>
 

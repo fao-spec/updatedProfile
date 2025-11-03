@@ -18,7 +18,6 @@ interface Blog {
 
 const BlogCard = ({
   blog,
-  index,
   scrollDir,
 }: {
   blog: Blog;
@@ -56,7 +55,6 @@ const BlogCard = ({
             ? 'opacity-0 translate-y-16'
             : 'opacity-0 -translate-y-16'
         }`}
-      style={{ transitionDelay: `${500 + index * 150}ms` }}
     >
       {blog.image_url && (
         <div className="relative h-56 overflow-hidden bg-transparent">
@@ -166,7 +164,7 @@ export const Blogs = () => {
     setTimeout(() => {
       setBlogs(allBlogs);
       setLoading(false);
-    }, 500);
+    }, 0);
   }, []);
 
   // Typing animation (heading)
@@ -181,7 +179,7 @@ export const Blogs = () => {
           clearInterval(interval);
         }
       }, 250);
-    }, 1000);
+    }, 0);
     return () => clearTimeout(delay);
   }, []);
 
@@ -205,7 +203,7 @@ export const Blogs = () => {
     <section id="blogs" ref={sectionRef} className="min-h-screen py-20 px-6 relative bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div
-          className={`text-center mb-16 transition-all duration-1000 delay-[1000ms] transform ${
+          className={`text-center mb-16 transition-all duration-1000 transform ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : scrollDir === 'down'

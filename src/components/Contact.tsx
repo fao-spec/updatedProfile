@@ -44,7 +44,7 @@ export const Contact = () => {
 
         <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
           Have a project in mind or just want to chat? I’m always open to new ideas,
-          collaborations, and opportunities to build something amazing together.
+          collaborations and opportunities to build something amazing together.
         </p>
 
         {/* Social Icons */}
