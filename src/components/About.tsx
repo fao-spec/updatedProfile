@@ -23,7 +23,7 @@ const About = () => {
         className="flex justify-center"
         >
         <motion.img
-            src="/projects/profiles.jpg"
+            src="/projects/profile-studio.jpg"
             alt="about"
             className="w-full max-w-md h-[350px] rounded-2xl object-cover object-top shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             whileHover={{ scale: 1.06 }}
