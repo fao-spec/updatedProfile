@@ -6,7 +6,7 @@ import { OrbitSpinner } from '../components/LoadingScreen';
 export const Hero = () => {
   const headingText = "Web Developer";
   const paragraphText =
-    "Crafting beautiful digital experiences with code, design and a touch of magic";
+    "Code with precision, built for performance.";
 
   const [visibleHeading, setVisibleHeading] = useState('');
   const [visibleParagraph, setVisibleParagraph] = useState('');
