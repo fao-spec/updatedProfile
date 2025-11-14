@@ -279,9 +279,16 @@ export const Projects = () => {
       {loading ? (
         <OrbitSpinner />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} scrollDir={scrollDir} />
+            <div className={`${index % 3 === 1 ? 'lg:translate-y-8' : ''}`}>
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                scrollDir={scrollDir}
+              />
+            </div>
           ))}
         </div>
       )}

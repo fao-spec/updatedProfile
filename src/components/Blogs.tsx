@@ -235,9 +235,16 @@ export const Blogs = () => {
             <OrbitSpinner />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             {blogs.map((blog, index) => (
-              <BlogCard key={blog.id} blog={blog} index={index} scrollDir={scrollDir} />
+              <div className={`${index % 3 === 1 ? 'lg:translate-y-8' : ''}`}>
+                <BlogCard
+                  key={blog.id}
+                  blog={blog}
+                  index={index}
+                  scrollDir={scrollDir}
+                />
+              </div>
             ))}
           </div>
         )}

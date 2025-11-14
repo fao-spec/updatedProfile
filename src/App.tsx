@@ -5,6 +5,7 @@ import {Layout} from "./components/Layout";
 import { Hero } from "./components/Hero";
 import { Contact } from "./components/Contact";
 import About from "./components/About";
+import { Experience } from "./components/Experience";
 
 import ProjectPage from "./pages/ProjectsPage";
 import BlogPage from "./pages/BlogPage";
@@ -21,6 +22,7 @@ function App() {
           <Layout>
             <Hero />
             <About />
+            <Experience />
             <Contact />
           </Layout>
         }

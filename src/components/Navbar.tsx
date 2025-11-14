@@ -69,6 +69,13 @@ export const Navbar = () => {
             About Me
           </button>
 
+          <button
+            onClick={() => scrollToSection('experience')}
+            className="block w-full text-left text-gray-300 hover:text-violet-400 transition-colors py-2"
+          >
+            Experience
+          </button>
+
             <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-300 hover:text-violet-400 transition-all duration-300 font-medium hover:scale-110"

@@ -92,7 +92,7 @@ export const Hero = () => {
           >
             <Link
               to="/projects"
-              className="px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-violet-500/50"
+              className="px-6 py-4 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-violet-500/50"
             >
               View My Work
             </Link>
@@ -100,7 +100,7 @@ export const Hero = () => {
               onClick={() =>
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="px-8 py-4 border-2 border-violet-600 text-violet-400 hover:bg-violet-600/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              className="px-6 py-4 border-2 border-violet-600 text-violet-400 hover:bg-violet-600/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
               Get In Touch
             </button>
